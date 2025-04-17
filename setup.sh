@@ -28,7 +28,7 @@ echo -e "${YELLOW}----------------------------------------------------------${NC
 echo -e " Dev > Script ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
 echo -e " Auther : ${green}St Pusat ${NC}"
-echo -e " © Rosi Store / Blega ${YELLOW}(${NC} 2025 ${YELLOW})${NC}"
+echo -e " © Blitar Udanawu / Karanggayam ${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -273,8 +273,8 @@ echo -e "\e[32mloading...\e[0m"
 clear
 clear
 TIMES="10"
-CHATID="727253762"
-KEY="7914407621:AAGO9kJzXE0FgjBLNoRMBAx52WQC6Y9PuXE"
+CHATID="6430177985"
+KEY="7567594287:AAGVeDwRq9QrNg6jSce30eOm9WiVtAWKxjA"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
@@ -288,7 +288,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <b> happy new year 2024 </b>
 <code>────────────────────</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+6281931472448"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+6281931615811"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -383,8 +383,8 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     curl -s ipinfo.io/city >>/etc/xray/city
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >>/etc/xray/isp
     print_install "Memasang Konfigurasi Packet"
-    wget -O /etc/haproxy/haproxy.cfg "https://raw.githubusercontent.com/Arya-Blitar22/media/main/haproxy.cfg" >/dev/null 2>&1
-    wget -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/Arya-Blitar22/media/main//xray.conf" >/dev/null 2>&1
+    wget -O /etc/haproxy/haproxy.cfg "https://raw.githubusercontent.com/Panwas89/media/main/haproxy.cfg" >/dev/null 2>&1
+    wget -O /etc/nginx/conf.d/xray.conf "https://raw.githubusercontent.com/Panwas89/media/main//xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
     curl ${REPO}media/nginx.conf > /etc/nginx/nginx.conf
@@ -495,9 +495,9 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit IP & Quota"
-wget -q https://raw.githubusercontent.com/Arya-Blitar22/st-pusat/main/media/limmit && chmod +x limmit && ./limmit
-wget -q https://raw.githubusercontent.com/Arya-Blitar22/st-pusat/main/media/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh
-wget -q https://raw.githubusercontent.com/Arya-Blitar22/st-pusat/main/slowdns/noobzvpns.zip
+wget -q https://raw.githubusercontent.com/Panwas89/st-pusat/main/media/limmit && chmod +x limmit && ./limmit
+wget -q https://raw.githubusercontent.com/Panwas89/st-pusat/main/media/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh
+wget -q https://raw.githubusercontent.com/Panwas89/st-pusat/main/slowdns/noobzvpns.zip
 unzip noobzvpns.zip
 bash install.sh
 rm -rf noobzvpns
@@ -553,7 +553,7 @@ clear
 print_install "Menginstall Dropbear"
 # // Installing Dropbear
 apt-get install dropbear -y > /dev/null 2>&1
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Arya-Blitar22/st-pusat/main/media/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Panwas89/st-pusat/main/media/issue.net"
 wget -q -O /etc/default/dropbear "${REPO}media/dropbear.conf"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
