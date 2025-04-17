@@ -1,5 +1,5 @@
 #!/bin/sh
-REPOS="https://raw.githubusercontent.com/Arya-Blitar22/st-pusat/main/"
+REPOS="https://raw.githubusercontent.com/Panwas89/st-pusat/main/"
 ns_domain_cloudflare() {
 	DOMAIN="group-nbc.my.id"
 	DOMAIN_PATH=$(cat /etc/xray/domain)
